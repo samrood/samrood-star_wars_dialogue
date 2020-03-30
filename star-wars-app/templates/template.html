@@ -1,0 +1,42 @@
+<html>
+<head><title>What would R2D2 do?</title></head>
+<body style="background-image: url(https://images.unsplash.com/photo-1544816565-aa8c1166648f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80); background-repeat: no-repeat center fixed; background-size: cover;">
+<br /> <br /> <br />
+<h1 style="color:black; font-family:Courier New; font-size: 60px;" align = 'center'>STAR WARS WORDS</h1>
+<style>
+    select {
+        width: 100px;
+        margin: 10px;
+        font-size: 14px;
+        font-family:verdana;
+    }
+    input {
+        width: 100px;
+        margin: 10px;
+        font-size: 4em;
+        font-family:verdana;
+    }
+</style>
+<br /> <br /> <br /><br />
+    <form align = 'center' action = "/" method = "POST" style="padding: 10px 30px;">
+        <select name='character'>
+            <option value='Obi-Wan'>Obi-Wan</option>
+            <option value='Vader'>Vader</option>
+            <option value='Luke' >Luke</option>
+            <option value='C-3PO'>C-3PO</option>
+            <option value='Han'>Han</option>
+            <option value='Padme'>Padme</option>
+            <option value='Yoda'>Anakin</option>
+            <option value='Leia'>Leia</option>
+            <option value='Yoda'>Yoda</option>
+        </select>
+        <input type="submit" value="Generate!">
+
+    </form>
+<br /> <br /> <br />
+    {% if character %}
+        <p class="white_box" align = 'center' style= "font-family:Courier New; font-weight: bold; background-color: rgba(153, 45, 45, 0.5); padding: 10px 40px; color:white; font-size: 30px"> {{ character }} : "{{ output }}" </p>
+    {% endif %}
+
+</body>
+</html>
